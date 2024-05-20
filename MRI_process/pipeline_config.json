@@ -1,0 +1,7 @@
+{
+  "rawPath": "/gemini/data-1/NACC_nii/",
+  "rootPath": "/gemini/code/NACC_processed_nii/",
+  "mode": "images",
+  "step7F": "0.45",
+  "step7G": "0.0"
+}

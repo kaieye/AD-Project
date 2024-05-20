@@ -1,0 +1,23 @@
+{
+  "csv_dir": "lookupcsv/CrossValid/",
+  "model_name": "XGBoost_CrossValid_nonImg",
+  "features": [
+		"age","apoe","education","trailA","trailB","boston","digitB","digitBL","digitF","digitFL",
+		"animal","gds","lm_imm","lm_del","mmse","npiq_DEL","npiq_HALL","npiq_AGIT","npiq_DEPD","npiq_ANX",
+		"npiq_ELAT","npiq_APA","npiq_DISN","npiq_IRR","npiq_MOT","npiq_NITE","npiq_APP","faq_BILLS",
+		"faq_TAXES","faq_SHOPPING","faq_GAMES","faq_STOVE","faq_MEALPREP","faq_EVENTS","faq_PAYATTN",
+		"faq_REMDATES","faq_TRAVEL","his_NACCFAM","his_CVHATT","his_CBSTROKE","his_HYPERTEN","his_DEPOTHR",
+		"his_PSYCDIS"
+              ],
+
+  "impute_method": "KNN",
+  "COG": {
+        "name": "XGBoostReg",
+        "type": "reg"
+  },
+    "ADD":
+{
+        "name": "XGBoostCla",
+        "type": "cla"
+}
+}

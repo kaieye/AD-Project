@@ -1,0 +1,64 @@
+{
+  "csv_dir": "lookupcsv/CrossValid/",
+  "model_name": "Res_ADNI_baseline_new",
+"features": [
+		"age","apoe","education","trailA","trailB","boston","digitB","digitBL","digitF","digitFL",
+		"animal","gds","lm_imm","lm_del","mmse","npiq_DEL","npiq_HALL","npiq_AGIT","npiq_DEPD","npiq_ANX",
+		"npiq_ELAT","npiq_APA","npiq_DISN","npiq_IRR","npiq_MOT","npiq_NITE","npiq_APP","faq_BILLS",
+		"faq_TAXES","faq_SHOPPING","faq_GAMES","faq_STOVE","faq_MEALPREP","faq_EVENTS","faq_PAYATTN",
+		"faq_REMDATES","faq_TRAVEL","his_NACCFAM","his_CVHATT","his_CBSTROKE","his_HYPERTEN","his_DEPOTHR",
+		"his_PSYCDIS"
+              ],   
+    "impute_method":"KNN",
+"backbone":{
+        "model":                "CNN",
+        "fil_num":              20,
+        "drop_rate":            0,
+        "lr":                   0.001,
+        "epochs":               20
+    },
+    "ADD":{
+"name":"CatBoostCla",
+        "fil_num":              30,
+        "drop_rate":            0.5,
+        "batch_size":           64,
+        "lr":                   0.001,
+        "factor":               1,
+        "sampleWeights": {
+                "ADNI":     1,
+                "NACC":     1
+              
+        },
+        "out_size":             2,
+        "type":                 "cla"
+    },
+    "COG":{
+"name":"CatBoostReg",
+        "fil_num":              100,
+        "drop_rate":            0.5,
+        "batch_size":           64,
+        "lr":                   0.001,
+        "sampleWeights": {
+                "ADNI":     1,
+                "NACC":     1
+              
+        },
+        "out_size":             1,
+        "type":                 "reg",
+        "factor":               1
+    },
+    "default": {
+        "fil_num":              50,
+        "drop_rate":            0.5,
+        "batch_size":           128,
+        "lr":                   0.001,
+        "out_size":             1,
+        "type":                 "reg",
+        "factor":               1,
+        "sampleWeights": {
+                "ADNI":     1,
+                "NACC":     1
+               
+        }
+    }
+}
