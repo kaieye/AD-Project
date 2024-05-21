@@ -25,5 +25,6 @@
 
 ## 诊断数据下载
 
-https://pan.baidu.com/s/1Nw2rnYb-J_35r37MCkg4jw提取密码为作者姓名笔画数x2
+[https://pan.baidu.com/s/1Nw2rnYb-J_35r37MCkg4jw](https://pan.baidu.com/s/1IEcOZrdRd_Q9ZMxCVcatXg)
+提取密码为作者姓名笔画数x2
 
